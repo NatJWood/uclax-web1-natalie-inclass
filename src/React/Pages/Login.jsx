@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const SunAndMoon = () => {
+const Login = () => {
 
     const [imageSrc, imageSrcUpdate] = useState('/assets/img/sun.png');
 
@@ -13,9 +13,11 @@ const SunAndMoon = () => {
     }
 
     return (
-        <div>The Sun and The Moon
+        <div>
+            <h1>The Sun and The Moon</h1>
             <img
             src={ imageSrc } 
+            alt= 'The Sun and Moon'
             onMouseOver={ imageOver }
             onMouseOut= { imageOut }
             />
@@ -23,4 +25,4 @@ const SunAndMoon = () => {
     )
 }
 
-export default SunAndMoon;
+export default Login;
