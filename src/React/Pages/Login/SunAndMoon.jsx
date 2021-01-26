@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
+import styled from 'styled-components';
 
-const Login = () => {
+const SunAndMoon = () => {
 
     const [imageSrc, imageSrcUpdate] = useState('/assets/img/sun.png');
 
@@ -12,17 +13,22 @@ const Login = () => {
         imageSrcUpdate('/assets/img/sun.png');
     }
 
+
     return (
-        <div>
-            <h1>The Sun and The Moon</h1>
+        <SunAndMoonStyled className='SunAndMoon'>
+            <h2>Sun and Moon</h2>
             <img
             src={ imageSrc } 
             alt= 'The Sun and Moon'
             onMouseOver={ imageOver }
             onMouseOut= { imageOut }
-            />
-        </div>
-    )
+            /> 
+        </SunAndMoonStyled>
+    );
 }
 
-export default Login;
+export default SunAndMoon;
+
+const SunAndMoonStyled = styled.div`
+    
+`;
