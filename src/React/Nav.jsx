@@ -17,7 +17,7 @@ export default Nav;
 
 const NavStyled = styled.nav`
     a {
-        background teal;
+        background: teal;
         color: white;
         text-decoration: none;
 
