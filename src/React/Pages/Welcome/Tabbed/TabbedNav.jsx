@@ -2,15 +2,22 @@ import React from 'react';
 import styled from 'styled-components';
 import TabbedNavItem from './TabbedNavItem';
 
-const TabbedNav = ({changeTabs}) => {
+const TabbedNav = ({changeTabs, tabItems, chosenTab}) => {
+
+    console.log('TabbedNavItem tabItems', tabItems);
 
     return (
         <TabbedNavStyled className='TabbedNav'>
-            TabbedNav 
-
-            <button onClick={ changeTabs }>HELLO</button>
-
-            <TabbedNavItem />
+            {
+            tabItems.map((tabItem, idx) => {
+                return <TabbedNavItem 
+                            key={idx} 
+                            tabItem={tabItem} 
+                            changeTabs={changeTabs }
+                            chosenTab={chosenTab}
+                        />
+            })
+            }
         </TabbedNavStyled>
     );
 }
