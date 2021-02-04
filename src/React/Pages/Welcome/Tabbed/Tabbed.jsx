@@ -8,6 +8,7 @@ import TabbedContent from './TabbedContent.jsx';
 /* script ---------------------------*/
 import { tabItems } from './TabbedData.js';
 
+
 const Tabbed = () => {
 
     const [ chosenTab, chosenTabUpdate ] = useState(tabItems[1]);
