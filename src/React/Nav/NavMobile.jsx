@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { 
@@ -11,14 +11,27 @@ import Nav from './Nav.jsx';
 
 const NavMobile = () => {
 
+    const [showMobileMenu, showMobileMenuUpdate] = useState(false);
+
+    const handleHamburgerToggle = () => {
+        showMobileMenuUpdate(!showMobileMenu);
+    }
+
     return (
         <NavMobileStyled className='NavMobile'>
-            <div className="hamburger">
+            <div 
+                className="hamburger"
+                onClick={ handleHamburgerToggle }
+            >
                 <FontAwesomeIcon icon={faBars} />
             </div>
-            <div className="nav-wrapper">
-                <Nav />
-            </div>
+
+            {
+                showMobileMenu &&
+                <div className="nav-wrapper">
+                    <Nav />
+                </div>
+            }
         </NavMobileStyled>
     );
 }
