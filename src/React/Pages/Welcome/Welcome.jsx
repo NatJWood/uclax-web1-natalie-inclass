@@ -2,7 +2,7 @@ import React from 'react';
 
 /* Components ---------------------------*/
 // import Slideshow from './Slideshow.jsx';
-import Staff from './Staff.jsx';
+import Staff from './Staff/Staff.jsx';
 import Tabbed from './Tabbed/Tabbed.jsx';
 
 const Welcome = () => {
@@ -14,7 +14,10 @@ const Welcome = () => {
             <div className="nested">
                 <Tabbed />
             </div>
-            <Staff />
+
+            <div className="nested">
+                <Staff />
+            </div>
         </div>
     )
 }
