@@ -8,8 +8,16 @@ const FilterNav = ({services, catChosen, catChosenUpdate}) => {
 
     return (
         <FilterNavStyled className='FilterNav'>
-            FilterNav 
-            <FilterNavButton />
+            {
+                services.categories.map((category, idx) => {
+                    return <FilterNavButton
+                    key={idx} 
+                    category={category} 
+                    catChosen={catChosen}
+                    catChosenUpdate={catChosenUpdate}
+                    />
+                })
+            }
         </FilterNavStyled>
     );
 }
@@ -17,5 +25,7 @@ const FilterNav = ({services, catChosen, catChosenUpdate}) => {
 export default FilterNav;
 
 const FilterNavStyled = styled.div`
-    
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
 `;

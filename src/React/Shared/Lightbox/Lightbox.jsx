@@ -3,11 +3,15 @@ import styled from 'styled-components';
 
 import Light from './Light.jsx';
 
-const Lightbox = () => {
+const Lightbox = ({show, onHide, children}) => {
+
+    if (!show) {return '';}
 
     return (
-        <LightboxStyled className='Lightbox'>
-            <Light />
+        <LightboxStyled className='Lightbox' onClick={onHide}>
+            <Light>
+                {children}
+            </Light>
         </LightboxStyled>
     );
 }
@@ -15,5 +19,13 @@ const Lightbox = () => {
 export default Lightbox;
 
 const LightboxStyled = styled.div`
-    
+    background-color: rgba(0, 0, 0, .75);
+
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+
+    z-index: 1000;
 `;
