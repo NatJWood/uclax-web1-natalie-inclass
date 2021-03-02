@@ -1,11 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
 
+/* scripts ---------------------------*/
+import {contactFields} from '../../../common/formData.js';
+
+/* components ---------------------------*/
+import UniversalForm from '../../Shared/UniversalForm/UniversalForm.jsx';
+
 const ContactForm = () => {
+
 
     return (
         <ContactFormStyled className='ContactForm'>
-            ContactForm 
+            <UniversalForm fields={ contactFields } /> 
         </ContactFormStyled>
     );
 }
