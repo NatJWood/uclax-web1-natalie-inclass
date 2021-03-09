@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const Error = ({theField}) => {
 
-    if (!theField.errors) { return ''; }
+    if (!theField.errors || theField.errors.length < 1) { return ''; }
 
     return (
         <ErrorStyled className='Error'>
@@ -15,5 +15,5 @@ const Error = ({theField}) => {
 export default Error;
 
 const ErrorStyled = styled.div`
-    
+    color: red;
 `;
