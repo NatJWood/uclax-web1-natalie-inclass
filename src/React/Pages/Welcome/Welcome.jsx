@@ -1,7 +1,7 @@
 import React from 'react';
 
 /* Components ---------------------------*/
-// import Slideshow from './Slideshow.jsx';
+import Slideshow from './Slideshow/Slideshow.jsx';
 import Staff from './Staff/Staff.jsx';
 import Tabbed from './Tabbed/Tabbed.jsx';
 
@@ -10,7 +10,7 @@ const Welcome = () => {
         <div>
             <h1>Welcome</h1>
 
-            {/* <Slideshow /> */}
+            <Slideshow />
             <div className="nested">
                 <Tabbed />
             </div>

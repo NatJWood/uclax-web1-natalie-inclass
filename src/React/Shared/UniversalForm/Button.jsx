@@ -1,11 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Button = () => {
+const Button = ({children, type}) => {
 
     return (
-        <ButtonStyled className='Button'>
-            Button 
+        <ButtonStyled 
+        className='Button'
+        type={type}>
+            {children}
         </ButtonStyled>
     );
 }

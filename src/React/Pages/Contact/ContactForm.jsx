@@ -12,7 +12,11 @@ const ContactForm = () => {
 
     return (
         <ContactFormStyled className='ContactForm'>
-            <UniversalForm fields={ contactFields } /> 
+            <UniversalForm 
+            fields={ contactFields } 
+            apiURL='/email/send'
+            submitText='Send Email'
+            /> 
         </ContactFormStyled>
     );
 }
